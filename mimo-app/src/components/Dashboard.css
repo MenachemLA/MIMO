@@ -1,0 +1,287 @@
+.dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.dashboard-title {
+  font-size: 36px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--dark-green), var(--burgundy));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.dashboard-subtitle {
+  color: #666;
+  font-size: 16px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-actions .user-email {
+  padding: 8px 16px;
+  background: var(--light-gray);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.btn-signout {
+  background: var(--burgundy);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-signout:hover {
+  background: var(--dark-burgundy);
+}
+
+.accounts-summary {
+  margin-bottom: 40px;
+}
+
+.accounts-summary h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dark-green);
+  margin-bottom: 16px;
+}
+
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.account-card {
+  background: linear-gradient(135deg, var(--dark-green), var(--rich-green));
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(26, 77, 46, 0.2);
+  transition: all 0.3s ease;
+}
+
+.account-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(26, 77, 46, 0.3);
+}
+
+.account-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.account-card-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.account-card-type {
+  font-size: 12px;
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.account-card-balance {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.pl-statement {
+  background: var(--light-gray);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.pl-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark-green);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.pl-section {
+  background: white;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.section-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.section-total {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.section-total.positive {
+  color: var(--dark-green);
+}
+
+.section-total.negative {
+  color: var(--burgundy);
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: var(--light-gray);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.category-item:hover {
+  background: #ddd;
+  transform: translateX(4px);
+}
+
+.category-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.category-icon {
+  font-size: 22px;
+  width: 32px;
+  text-align: center;
+}
+
+.category-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.category-amount {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.category-amount.positive {
+  color: var(--dark-green);
+}
+
+.category-amount.negative {
+  color: var(--burgundy);
+}
+
+.pl-footer {
+  background: white;
+  border-radius: 10px;
+  padding: 24px;
+  margin-top: 20px;
+}
+
+.net-income {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.net-label {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.net-amount {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.net-amount.positive {
+  color: var(--dark-green);
+}
+
+.net-amount.negative {
+  color: var(--burgundy);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-card {
+    padding: 24px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .accounts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pl-statement {
+    padding: 20px;
+  }
+
+  .net-income {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
