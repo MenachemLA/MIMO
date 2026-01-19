@@ -17,6 +17,28 @@
 .header {
   text-align: center;
   margin-bottom: 40px;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: transparent;
+  color: var(--dark-green);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: var(--light-gray);
+  border-radius: 6px;
+  transform: none;
+  box-shadow: none;
 }
 
 .header h1 {
@@ -209,4 +231,219 @@
 
 .btn-submit:hover {
   background: var(--rich-green);
+}
+
+/* Institution Selection */
+.institution-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-box {
+  margin-bottom: 8px;
+}
+
+.institution-search {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid var(--light-gray);
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.institution-search:focus {
+  border-color: var(--dark-green);
+  box-shadow: 0 0 0 3px rgba(26, 77, 46, 0.1);
+}
+
+.institutions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.institutions-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.institutions-list::-webkit-scrollbar-track {
+  background: var(--light-gray);
+  border-radius: 3px;
+}
+
+.institutions-list::-webkit-scrollbar-thumb {
+  background: var(--dark-green);
+  border-radius: 3px;
+}
+
+.institution-btn {
+  background: white;
+  border: 2px solid var(--light-gray);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.institution-btn:hover {
+  border-color: var(--dark-green);
+  background: #fafafa;
+  transform: translateX(4px);
+}
+
+.institution-logo {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.institution-name {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.institution-arrow {
+  font-size: 20px;
+  color: var(--dark-green);
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
+
+.institution-btn:hover .institution-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.no-results p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.no-results-hint {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Bank Connection Form */
+.bank-connect-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bank-header {
+  text-align: center;
+  padding: 24px;
+  background: var(--light-gray);
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.bank-logo-large {
+  font-size: 56px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.bank-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark-green);
+  margin-bottom: 8px;
+}
+
+.security-notice {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+}
+
+.btn-connect {
+  width: 100%;
+  background: var(--dark-green);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.btn-connect:hover {
+  background: var(--rich-green);
+}
+
+.terms-notice {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* OAuth Modal */
+.oauth-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.oauth-modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.oauth-spinner {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+  border: 4px solid var(--light-gray);
+  border-top: 4px solid var(--dark-green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.oauth-modal-content p {
+  font-size: 16px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.connecting-subtext {
+  font-size: 14px !important;
+  color: #666 !important;
+  font-weight: 400 !important;
+  margin-top: 8px;
 }
